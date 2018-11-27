@@ -50,4 +50,6 @@ RUN wget -O cmf.zip ${CMF_URL}/${CMF_VERSION} \
 # CLEANUP
 RUN chown -R 501:80 /usr/src/roundcubemail/plugins \
   && rm *.zip \
-  && apt-get purge -qq wget unzip
+  && apt-get purge -qq wget unzip \
+  && apt-get clean
+
