@@ -35,7 +35,7 @@ RUN wget -O pl.zip ${PL_URL}/version-${PL_VERSION} \
 
 # CONTEXT MENU
 ENV CM_VERSION=2.1.2
-ENV CM_URL=https://codeload.github.com/random-cuber/contextmenu/zip
+ENV CM_URL=https://codeload.github.com/johndoh/contextmenu/zip
 RUN wget -O cm.zip ${CM_URL}/${CM_VERSION} \
   && unzip cm.zip \
   && mv contextmenu-${CM_VERSION} /usr/src/roundcubemail/plugins/contextmenu
