@@ -59,13 +59,6 @@ ENV INFS_VERSION=0.2
 RUN wget -O infs.zip ${INFS_URL}/v${INFS_VERSION} \
   && unzip infs.zip \
   && mv Roundcube-Plugin-Infinite-Scroll-${INFS_VERSION} /usr/src/roundcubemail/plugins/infinitescroll
-  
-# FILTERS
-ENV FIL_URL=https://codeload.github.com/6ec123321/filters/zip
-ENV FIL_VERSION=2.1.7
-RUN wget -O fil.zip ${FIL_URL}/filters-${FIL_VERSION} \
-  && unzip fil.zip \
-&& mv filters-filters-${FIL_VERSION} /usr/src/roundcubemail/plugins/filters
 
 # CLEANUP
 RUN chown -R 501:80 /usr/src/roundcubemail/plugins \
