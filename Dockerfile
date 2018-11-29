@@ -47,10 +47,29 @@ RUN wget -O cmf.zip ${CMF_URL}/${CMF_VERSION} \
   && unzip cmf.zip \
   && mv contextmenu_folder-${CMF_VERSION} /usr/src/roundcubemail/plugins/contextmenu_folder
 
+# UNSUBSCRIBE
+ENV UNS_URL=https://codeload.github.com/SS88UK/roundcube-easy-unsubscribe/zip/master
+RUN wget -O uns.zip ${UNS_URL} \
+  && unzip uns.zip \
+  && mv roundcube-easy-unsubscribe-master /usr/src/roundcubemail/plugins/easy_unsubscribe
+
+# NOTIFICATIONS
+ENV NOTIF_URL=https://codeload.github.com/stremlau/html5_notifier/zip
+ENV NOTIF_VERSION=0.6.2
+RUN wget -O notif.zip ${NOTIF_URL}/v${NOTIF_VERSION} \
+  && unzip notif.zip \
+  && mv html5_notifier-${NOTIF_VERSION} /usr/src/roundcubemail/plugins/html5_notifier
+
+# INFINITE SCROLL
+ENV INFS_URL=https://codeload.github.com/messagerie-melanie2/Roundcube-Plugin-Infinite-Scroll/zip
+ENV INFS_VERSION=0.2
+RUN wget -O infs.zip ${INFS_URL}/v${INFS_VERSION} \
+  && unzip infs.zip \
+  && mv Roundcube-Plugin-Infinite-Scroll-${INFS_VERSION} /usr/src/roundcubemail/plugins/infinitescroll
+
 # CLEANUP
 RUN chown -R 501:80 /usr/src/roundcubemail/plugins \
   && rm *.zip \
   && apt-get purge -qq wget unzip \
   && apt-get -qq autoremove --purge \
   && apt-get clean
-
