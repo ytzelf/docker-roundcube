@@ -3,7 +3,8 @@ FROM roundcube/roundcubemail
 # GENERAL
 RUN apt-get update \
   && apt-get install -qq --no-install-recommends wget unzip \
-  && pecl install apcu
+  && pecl install apcu \
+  && pecl install redis
 
 # CARDDAV
 ENV CARDDAV_VERSION=3.0.3
