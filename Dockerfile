@@ -38,7 +38,7 @@ ENV CM_VERSION=2.3
 ENV CM_URL=https://codeload.github.com/johndoh/roundcube-contextmenu/zip
 RUN wget -O cm.zip ${CM_URL}/${CM_VERSION} \
   && unzip cm.zip \
-  && mv contextmenu-${CM_VERSION} /usr/src/roundcubemail/plugins/contextmenu
+  && mv roundcube-contextmenu-${CM_VERSION} /usr/src/roundcubemail/plugins/contextmenu
   
 # CONTEXT MENU FOLDER
 ENV CMF_VERSION=1.3.3
