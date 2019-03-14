@@ -1,4 +1,4 @@
-FROM roundcube/roundcubemail:elastic
+FROM roundcube/roundcubemail
 
 # GENERAL
 RUN apt-get update \
