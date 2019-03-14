@@ -19,7 +19,7 @@
         "pear/net_sieve": "~1.4.3",
         "roundcube/plugin-installer": "~0.1.6",
         "masterminds/html5": "~2.3.0",
-        "roundcube/carddav": "dev-master",
+        "roundcube/carddav": "~3.0.3",
 	"mfreiholz/persistent_login": "dev-master",
 	"johndoh/contextmenu": "dev-master"
     },
