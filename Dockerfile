@@ -3,7 +3,7 @@ FROM roundcube/roundcubemail
 # GENERAL
 RUN apt-get update \
   && apt-get -qq upgrade \
-  && apt-get install -qq --no-install-recommends wget unzip nano \
+  && apt-get install -qq --no-install-recommends wget unzip nano git \
   && pecl install apcu \
   && pecl install redis
 
