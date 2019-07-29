@@ -21,7 +21,8 @@
         "masterminds/html5": "~2.3.0",
         "roundcube/carddav": "~3.0.3",
 	"mfreiholz/persistent_login": "dev-master",
-	"johndoh/contextmenu": "~2.3"
+	"johndoh/contextmenu": "~2.3",
+	"jfcherng/show-folder-size": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8.36 || ^5.7.21"
