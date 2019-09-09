@@ -18,17 +18,16 @@
         "pear/crypt_gpg": "~1.6.3",
         "pear/net_sieve": "~1.4.3",
         "roundcube/plugin-installer": "~0.1.6",
-        "masterminds/html5": "~2.3.0",
-        "roundcube/carddav": "~3.0.3",
+        "masterminds/html5": "~2.5.0",
+        "roundcube/carddav": "dev-master",
 	"mfreiholz/persistent_login": "dev-master",
-	"johndoh/contextmenu": "~2.3",
+	"johndoh/contextmenu": "dev-master",
 	"jfcherng/show-folder-size": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8.36 || ^5.7.21"
     },
     "suggest": {
-        "pear/net_ldap2": "~2.2.0 required for connecting to LDAP",
         "kolab/net_ldap3": "~1.0.6 required for connecting to LDAP",
         "mkopinsky/zxcvbn-php": "^4.4.2 required for Zxcvbn password strength driver"
     }
