@@ -1,4 +1,4 @@
-FROM roundcube/roundcubemail:latest-fpm
+FROM roundcube/roundcubemail:latest-apache
 
 # GENERAL
 RUN apt-get update \
