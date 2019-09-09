@@ -1,4 +1,4 @@
-FROM roundcube/roundcubemail
+FROM roundcube/roundcubemail:latest-fpm-alpine
 
 # GENERAL
 RUN apt-get update \
@@ -10,7 +10,7 @@ RUN apt-get update \
 COPY composer.json /usr/src/roundcubemail/composer.json
 RUN cd /usr/src/roundcubemail \
   && curl -s https://getcomposer.org/installer | php \
-  && php composer.phar update
+  && php composer.phar --prefer-dist --no-dev --no-interaction --optimize-autoloader --apcu-autoloader update
 
 # CLEANUP
 RUN apt-get purge -qq wget unzip \
