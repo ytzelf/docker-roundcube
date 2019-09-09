@@ -1,4 +1,4 @@
-FROM roundcube/roundcubemail:latest-fpm-alpine
+FROM roundcube/roundcubemail:latest-fpm
 
 # GENERAL
 RUN apt-get update \
