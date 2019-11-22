@@ -11,10 +11,12 @@ RUN apt-get update \
 RUN cd /usr/src/roundcubemail \
   && curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
   && mv /usr/src/roundcubemail/composer.json-dist /usr/src/roundcubemail/composer.json \
-  && composer --prefer-dist --no-interaction --optimize-autoloader --apcu-autoloader require roundcube/carddav mfreiholz/persistent_login:dev-master johndoh/contextmenu jfcherng/show-folder-size \
+  && composer --prefer-dist --no-interaction --optimize-autoloader --apcu-autoloader require roundcube/carddav  johndoh/contextmenu jfcherng/show-folder-size \
   && composer --prefer-dist --no-interaction --optimize-autoloader --apcu-autoloader update
 
 # CLEANUP
 RUN apt-get purge -qq wget unzip \
   && apt-get -qq autoremove --purge \
   && apt-get clean
+
+# mfreiholz/persistent_login:dev-master
