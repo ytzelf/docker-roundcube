@@ -19,4 +19,3 @@ RUN apt-get purge -qq wget unzip \
   && apt-get -qq autoremove --purge \
   && apt-get clean
 
-# mfreiholz/persistent_login:dev-master
