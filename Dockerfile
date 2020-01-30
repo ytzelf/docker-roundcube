@@ -11,7 +11,7 @@ RUN apt-get update \
 RUN cd /usr/src/roundcubemail \
   && curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
   && mv /usr/src/roundcubemail/composer.json-dist /usr/src/roundcubemail/composer.json \
-  && composer --prefer-dist --no-interaction --optimize-autoloader --apcu-autoloader require roundcube/carddav:dev-master johndoh/contextmenu:dev-master jfcherng/show-folder-size:dev-master kolab/calendar:dev-master kolab/libcalendaring:dev-master kolab/libkolab:dev-master mfreiholz/persistent_login:dev-master \
+  && composer --prefer-dist --no-interaction --optimize-autoloader --apcu-autoloader require roundcube/carddav:dev-master johndoh/contextmenu jfcherng/show-folder-size:dev-master kolab/calendar:dev-master kolab/libcalendaring:dev-master kolab/libkolab:dev-master mfreiholz/persistent_login:dev-master \
   && composer --prefer-dist --no-interaction --optimize-autoloader --apcu-autoloader update
 
 # CLEANUP
